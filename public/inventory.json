@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "name": "ThinkPad T14 (14”), AMD laptop",
+        "price": "1,325.40",
+        "description": "Between processor, memory, storage, and display options, the ThinkPad T14 AMD 14 inch laptop offers nearly unlimited configurations, making it one of the most customizable computers on the market. With long battery life and rapid-charging technology, you can unleash from your desk to confidently go wherever the road or the sky takes you.",
+        "img": "https://i.ibb.co/hMJ2vK0/1.webp",
+        "quantity": "4",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 2,
+        "name": "ThinkPad P1 Gen 4 (16 Intel) Mobile Workstation",
+        "price": "2,041.02",
+        "description": "The ThinkPad P1 Gen 4 performance laptop blends form and function with an elegant carbon-fiber weave and lightweight design, starting at just 1.8kg / 3.99lbs. The stylish exterior conceals impressive performance with the latest 11th Gen Intel® Core™ or Xeon® processors. Plus, choose professional NVIDIA® RTX™ graphics—supporting up to the NVIDIA® RTX™ A5000 backed by ISV certifications or the powerful NVIDIA® GeForce RTX™ 3070 or 3080.",
+        "img": "https://i.ibb.co/JnkXjJg/2.webp",
+        "quantity": "3",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 3,
+        "name": "Legion 5 Pro Gen 6 (16 AMD) Gaming Laptop",
+        "price": "1,359.99",
+        "description": "With the all-new AMD Ryzen™ 5000 H-Series Mobile Processors, you can enjoy the best competitive gaming performance on a thin and light notebook with amazing battery life. Never compromise on your gaming laptop again.Experience ultimate performance with the latest Ampere NVIDIA® GeForce RTX™ 30 Series Laptop GPUs for gamers and creators. Supercharged with Ray Tracing Cores, Tensor Cores, and streaming multiprocessors, our thin and light design delivers the most realistic ray-traced graphics, cutting-edge new features, DLSS 2.0 and the power of AI.",
+        "img": "https://i.ibb.co/chLfvFh/3.webp",
+        "quantity": "2",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 4,
+        "name": "Legion 5 Gen 6 (15” AMD) Gaming Laptop",
+        "price": "1,151.99",
+        "description": "They say life is full of compromises. They say you cant have high performance and long battery life on the same notebook. They say that a high-performance gaming laptop has to be big, bulky, and heavy. They’re wrong. Now you can enjoy elite gaming performance on a thin and light gaming laptop with amazing battery life, thanks to the new AMD Ryzen™ 5000 H-Series Mobile Processors. Never compromise on your gaming laptop again.",
+        "img": "https://i.ibb.co/mFbQPKb/4.webp",
+        "quantity": "5",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 5,
+        "name": "Yoga 9i Gen 7 Intel (14) - Storm Grey",
+        "price": "1,399.99",
+        "description": "Take a revolutionary leap into real-world hybrid performance with Intel® Evo, now powered by up to a 12th Gen Intel® Core™ i7 processor, which distributes processing power to where you need it most. From streaming to browsing to photo and video editing and more—experience the performance boost, you need for your most significant breakthroughs.",
+        "img": "https://i.ibb.co/5j63RKd/5.webp",
+        "quantity": "6",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 6,
+        "name": "Yoga 7i (15) 2 in 1 Laptop",
+        "price": "1,129.99",
+        "description": "This sleek 2 in 1 laptop offers a contemporary style. Crafted from sandblasted and anodized metal, the Yoga 7i’s subtly rounded edges are designed to feel comfortable in your hands. A 360-degree hinge offers stability as you transition from tablet to laptop mode and back.",
+        "img": "https://i.ibb.co/JkKgtTw/6.webp",
+        "quantity": "8",
+        "supplier": "Lenovo"
+    },
+    {
+        "id": 7,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 8,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 9,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 10,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 11,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 12,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 13,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 14,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 15,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 16,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 17,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 18,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 19,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    },
+    {
+        "id": 20,
+        "name": "",
+        "price": "",
+        "description": "",
+        "img": "",
+        "quantity": "",
+        "supplier": ""
+    }
+]
