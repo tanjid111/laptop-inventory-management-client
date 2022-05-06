@@ -5,6 +5,7 @@ import banner2 from '../../../Images/Banner/2.png'
 import banner3 from '../../../Images/Banner/3.png'
 import banner4 from '../../../Images/Banner/4.png'
 import banner5 from '../../../Images/Banner/5.jpg'
+import './Banner.css'
 
 const Banner = () => {
     return (
@@ -17,8 +18,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h5>First slide label</h5>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h4 className='text-dark'>Find the laptop To fit your style</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -28,8 +28,7 @@ const Banner = () => {
                         alt="Second slide"
                     />
                     <Carousel.Caption>
-                        <h5>Second slide label</h5>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h4>Gaming on the go!</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -39,8 +38,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h4>Best Performance</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -50,8 +48,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h4>Take it where ever you go!</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -61,8 +58,7 @@ const Banner = () => {
                         alt="Third slide"
                     />
                     <Carousel.Caption>
-                        <h5>Third slide label</h5>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h4>Best keyboard comfort!</h4>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>

@@ -9,7 +9,7 @@ import {
 
 export default function App() {
     return (
-        <MDBFooter className='bg-light text-center text-white fixed-bottom'>
+        <MDBFooter className='bg-light text-center text-white mt-auto'>
             <div className='container p-4 pb-0'>
                 <section className='mb-4'>
                     <a
