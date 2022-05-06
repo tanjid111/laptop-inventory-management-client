@@ -17,9 +17,10 @@ const Header = () => {
                         <Navbar.Collapse id="responsive-navbar-nav">
                             <Nav className="ms-auto">
                                 <Nav.Link className='text-primary fw-bold' as={Link} to="/">Home</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' href="#manage">Manage Items</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' href="#add">Add Items</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' eventKey={2} href="#memes">My Items</Nav.Link>
+                                <Nav.Link className='text-primary fw-bold' as={Link} to="manage">Manage Inventory</Nav.Link>
+                                <Nav.Link className='text-primary fw-bold' as={Link} to="add">Add Items</Nav.Link>
+                                <Nav.Link className='text-primary fw-bold' as={Link} to="myItems">My Items</Nav.Link>
+                                <Nav.Link className='text-primary fw-bold' as={Link} to="login"> Login </Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>
