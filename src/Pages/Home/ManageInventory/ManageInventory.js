@@ -1,9 +1,39 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
+import { confirmAlert } from 'react-confirm-alert';
 import useInventories from '../../../Hooks/useInventories';
+import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
 
 const ManageInventory = () => {
     const [inventories, setInventories] = useInventories([]);
+    const handleDelete = id => {
+        confirmAlert({
+            title: 'Confirm to submit',
+            message: 'Are you sure to do this.',
+            buttons: [
+                {
+                    label: 'Yes',
+                    onClick: (_id) => {
+                        const url = `http://localhost:5000/laptop/${id}`;
+                        fetch(url, {
+                            method: 'DELETE'
+                        })
+                            .then(res => res.json())
+                            .then(data => {
+                                console.log(data);
+                                const remaining = inventories.filter(inventory => inventory._id !== id);
+                                setInventories(remaining);
+                            })
+                    }
+                },
+                {
+                    label: 'No',
+                    onClick: (_id) => alert('Not deleting any Inventory')
+                }
+            ]
+        });
+    }
+
     return (
         <div>
             <div className='container'>
@@ -30,7 +60,7 @@ const ManageInventory = () => {
                                 <td>{inventory.supplier}</td>
                                 <td>${inventory.price}</td>
                                 <td>{inventory.quantity}</td>
-                                <td><button type="button" className="btn btn-primary">Delete</button></td>
+                                <td><button onClick={() => { handleDelete(inventory._id) }} type="button" className="btn btn-primary">Delete</button></td>
                             </tr>)}
 
 

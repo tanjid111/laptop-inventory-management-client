@@ -3,7 +3,21 @@ import { useForm } from "react-hook-form";
 
 const AddInventory = () => {
     const { register, handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    const onSubmit = data => {
+        console.log(data)
+        const url = `http://localhost:5000/laptop`;
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
+    };
     return (
         <div className="w-50 mx-auto">
             <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold header">Add Inventory</h2>
@@ -20,7 +34,7 @@ const AddInventory = () => {
                 <input placeholder="Image Link" className="mb-2" {...register("img")} />
                 <label className='fw-bold text-primary fs-4'>Supplier</label>
                 <input placeholder="Supplier" className="mb-2" {...register("supplier")} />
-                <input className="btn btn-primary mx-auto py-3" type="submit" />
+                <input className="btn btn-primary mx-auto py-3" value="Add Item" type="submit" />
             </form>
         </div>
     );
