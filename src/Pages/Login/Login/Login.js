@@ -41,7 +41,7 @@ const Login = () => {
 
     return (
         <div className='container'>
-            <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold" style={{ width: "30vw" }}>Login Form</h2>
+            <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold header">Login Form</h2>
             <form className="App" onSubmit={handleSubmit(onSubmit)}>
                 <label className='fw-bold text-primary fs-4'>Email</label>
                 <input type="email" {...register("email", { required: true })} />

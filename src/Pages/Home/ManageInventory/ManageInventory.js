@@ -12,6 +12,7 @@ const ManageInventory = () => {
                     <thead>
                         <tr>
                             <th>#</th>
+                            <th>Image</th>
                             <th>Name</th>
                             <th>Supplier</th>
                             <th>Price</th>
@@ -22,8 +23,9 @@ const ManageInventory = () => {
                     <tbody>
 
                         {
-                            inventories.map(inventory => <tr>
+                            inventories.map(inventory => <tr key={inventory.id}>
                                 <td>{inventory.id}</td>
+                                <td><img style={{ width: "80px" }} src={inventory.img} alt="" /></td>
                                 <td>{inventory.name}</td>
                                 <td>{inventory.supplier}</td>
                                 <td>${inventory.price}</td>

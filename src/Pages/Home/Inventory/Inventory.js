@@ -15,7 +15,7 @@ const Inventory = ({ inventory }) => {
                     <div className="mask" style={{ backgroundColor: "rgba(251, 251, 251, 0.15)" }}></div>
                 </div>
                 <div className="card-body d-flex flex-column">
-                    <h4 className="card-title">{name}</h4>
+                    <h3 className="card-title">{name}</h3>
                     <h5 className="card-title">${price}</h5>
                     <h5 className="card-title">Quantity Available: {quantity}</h5>
                     <h5 className="card-title">Supplier: {supplier}</h5>
