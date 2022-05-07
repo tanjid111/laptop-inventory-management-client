@@ -70,15 +70,15 @@ const Register = () => {
             <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold" style={{ width: "30vw" }}>Registration Form</h2>
             <form className="App" onSubmit={handleSubmit(onSubmit)}>
                 <label className='fw-bold text-primary fs-4'>Name</label>
-                <input type="text" {...register("name")} />
+                <input placeholder='Name' type="text" {...register("name")} />
                 <label className='fw-bold text-primary fs-4'>Email</label>
-                <input type="email" {...register("email", { required: true })} />
+                <input placeholder='Email' type="email" {...register("email", { required: true })} />
                 {errors.email && <span style={{ color: "red" }}>
                     *Email* is mandatory </span>}
                 <label className='fw-bold text-primary fs-4'>Password</label>
-                <input type="password" {...register("password")} />
+                <input placeholder='Password' type="password" {...register("password")} />
                 <label className='fw-bold text-primary fs-4'>Confirm Password</label>
-                <input type="password" {...register("confirmPassword")} />
+                <input placeholder='Confirm Password' type="password" {...register("confirmPassword")} />
                 <input type={"submit"} className="btn btn-primary mx-auto py-3" />
                 <p className='text-danger' style={{ color: 'red' }}>{userError || error?.message || updateError?.message}</p>
                 <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={() => navigate('/login')}>Please Login</Link></p>

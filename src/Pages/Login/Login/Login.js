@@ -44,11 +44,11 @@ const Login = () => {
             <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold header">Login Form</h2>
             <form className="App" onSubmit={handleSubmit(onSubmit)}>
                 <label className='fw-bold text-primary fs-4'>Email</label>
-                <input type="email" {...register("email", { required: true })} />
+                <input placeholder='Email' type="email" {...register("email", { required: true })} />
                 {errors.email && <span style={{ color: "red" }}>
                     *Email* is mandatory </span>}
                 <label className='fw-bold text-primary fs-4'>Password</label>
-                <input type="password" {...register("password")} />
+                <input placeholder='Password' type="password" {...register("password")} />
                 <input type={"submit"} className="btn btn-primary mx-auto py-3" />
                 <p className='text-danger' style={{ color: 'red' }}>{error?.message}</p>
                 <p>New to the realtor website? <Link to='/register' className='text-primary text-decoration-none' onClick={() => navigate('/register')}>Please Register</Link></p>
