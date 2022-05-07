@@ -14,18 +14,19 @@ const InventoryDetail = () => {
         <div className='container'>
             <h1 className=' my-3 text-center'>InventoryDetail</h1>
             <div className='d-flex align-items-center justify-content-center'>
-                <MDBCard>
-                    <MDBCardImage className='text-center w-50 mx-auto' position='top' alt='...' src='https://mdbootstrap.com/img/new/standard/city/062.webp' />
+                <MDBCard className='w-50'>
+                    <MDBCardImage position='top' alt='...' src={inventory.img} />
                     <MDBCardBody>
-                        <MDBCardTitle>{inventory.name}</MDBCardTitle>
+                        <MDBCardTitle className='my-3'>{inventory.name}</MDBCardTitle>
                         <MDBCardText>
                             {inventory.description}
                         </MDBCardText>
                     </MDBCardBody>
                     <MDBListGroup flush>
-                        <MDBListGroupItem>Price: $</MDBListGroupItem>
-                        <MDBListGroupItem>Quantity available: either 0 or sold</MDBListGroupItem>
-                        <MDBListGroupItem>Supplier: </MDBListGroupItem>
+                        <MDBListGroupItem>Price: ${inventory.price}</MDBListGroupItem>
+                        <MDBListGroupItem>Quantity: {inventory.quantity}</MDBListGroupItem>
+                        <MDBListGroupItem>Sold: </MDBListGroupItem>
+                        <MDBListGroupItem>Supplier: {inventory.supplier}</MDBListGroupItem>
                     </MDBListGroup>
                     <MDBCardBody>
                         <MDBCardLink className='btn btn-primary' href='#'>Delivered</MDBCardLink>
