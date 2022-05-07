@@ -23,14 +23,17 @@ const Header = () => {
                         </Navbar.Brand>
                         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                         <Navbar.Collapse id="responsive-navbar-nav">
+                            <Nav.Link className='text-primary fw-bold' as={Link} to="/">Home</Nav.Link>
                             <Nav className="ms-auto">
-                                <Nav.Link className='text-primary fw-bold' as={Link} to="/">Home</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' as={Link} to="manage">Manage Inventory</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' as={Link} to="add">Add Items</Nav.Link>
-                                <Nav.Link className='text-primary fw-bold' as={Link} to="myItems">My Items</Nav.Link>
+
+
                                 {
                                     user ?
-                                        <Nav.Link className='text-primary fw-bold' as={Link} to="home" onClick={handleSignOut}> Sign Out </Nav.Link> :
+                                        [<Nav.Link className='text-primary fw-bold' as={Link} to="manage">Manage Inventory</Nav.Link>,
+                                        <Nav.Link className='text-primary fw-bold' as={Link} to="add">Add Items</Nav.Link>,
+                                        <Nav.Link className='text-primary fw-bold' as={Link} to="myItems">My Items</Nav.Link>,
+                                        <Nav.Link className='text-primary fw-bold' as={Link} to="login"> Login </Nav.Link>,
+                                        <Nav.Link className='text-primary fw-bold' as={Link} to="home" onClick={handleSignOut}> Sign Out </Nav.Link>] :
                                         <Nav.Link className='text-primary fw-bold' as={Link} to="login"> Login </Nav.Link>
 
                                 }
