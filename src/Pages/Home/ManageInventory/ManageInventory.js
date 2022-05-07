@@ -28,7 +28,7 @@ const ManageInventory = () => {
                                 <td>{inventory.supplier}</td>
                                 <td>${inventory.price}</td>
                                 <td>{inventory.quantity}</td>
-                                <td><button type="button" class="btn btn-primary">Delete</button></td>
+                                <td><button type="button" className="btn btn-primary">Delete</button></td>
                             </tr>)}
 
 

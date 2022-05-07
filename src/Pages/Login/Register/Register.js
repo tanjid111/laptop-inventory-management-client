@@ -1,9 +1,10 @@
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import React, { useState } from 'react';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
@@ -13,10 +14,21 @@ const Register = () => {
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    const [
+        updateProfile,
+        updating,
+        updateError
+    ] = useUpdateProfile(auth);
+
     const [userError, setUserError] = useState('');
 
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
+
+    if (loading || updating) {
+        return <Loading></Loading>
+    }
 
 
     /* ---------------------------------------Registration submit btn-------------------------------------------------- */
@@ -49,7 +61,9 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password)
         setUserError('');
         navigate('/home')
-        // await updateProfile({ displayName: name });
+        await updateProfile({ displayName: name });
+
+
     };
     return (
         <div className='container'>
@@ -66,7 +80,7 @@ const Register = () => {
                 <label className='fw-bold text-primary fs-4'>Confirm Password</label>
                 <input type="password" {...register("confirmPassword")} />
                 <input type={"submit"} className="btn btn-primary mx-auto py-3" />
-                <p className='text-danger' style={{ color: 'red' }}>{userError || error?.message}</p>
+                <p className='text-danger' style={{ color: 'red' }}>{userError || error?.message || updateError?.message}</p>
                 <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={() => navigate('/login')}>Please Login</Link></p>
                 <SocialLogin></SocialLogin>
             </form>

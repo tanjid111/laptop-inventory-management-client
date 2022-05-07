@@ -1,12 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import google from '../../../Images/social/google.png'
 import facebook from '../../../Images/social/facebook.png'
 import { useSignInWithFacebook, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
+import { useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const [signInWithFacebook, user1, loading1, error1] = useSignInWithFacebook(auth);
+    const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
+
+
+    if (user || user1) {
+        navigate(from, { replace: true });
+    }
+    if (loading || loading1) {
+        return <Loading></Loading>
+    }
     return (
         <div>
             <div className='d-flex align-items-center'>
@@ -28,6 +41,7 @@ const SocialLogin = () => {
                     <img style={{ width: '30px' }} src={facebook} alt="" />
                     <span className='px-2'>Facebook Sign In</span>
                 </button>
+                <p className='text-danger' style={{ color: 'red' }}>{error?.message || error1?.message}</p>
             </div>
         </div>
     );
