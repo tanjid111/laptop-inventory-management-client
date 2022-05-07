@@ -23,8 +23,8 @@ const ManageInventory = () => {
                     <tbody>
 
                         {
-                            inventories.map(inventory => <tr key={inventory.id}>
-                                <td>{inventory.id}</td>
+                            inventories.map(inventory => <tr key={inventory._id}>
+                                {/* <td>{inventory._id}</td> */}
                                 <td><img style={{ width: "80px" }} src={inventory.img} alt="" /></td>
                                 <td>{inventory.name}</td>
                                 <td>{inventory.supplier}</td>

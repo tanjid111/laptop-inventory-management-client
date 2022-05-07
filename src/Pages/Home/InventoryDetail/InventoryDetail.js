@@ -8,18 +8,18 @@ const InventoryDetail = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => console.log(data);
     const { inventoryId } = useParams();
-    // const [inventories] = useInventoryDetail(inventoryId);
+    const [inventory] = useInventoryDetail(inventoryId);
 
     return (
-        <div className='container border'>
-            <h2 className=' my-2 text-center'>InventoryDetail:{inventoryId}</h2>
+        <div className='container'>
+            <h1 className=' my-3 text-center'>InventoryDetail</h1>
             <div className='d-flex align-items-center justify-content-center'>
-                <MDBCard style={{ width: '18rem' }}>
-                    <MDBCardImage position='top' alt='...' src='https://mdbootstrap.com/img/new/standard/city/062.webp' />
+                <MDBCard>
+                    <MDBCardImage className='text-center w-50 mx-auto' position='top' alt='...' src='https://mdbootstrap.com/img/new/standard/city/062.webp' />
                     <MDBCardBody>
-                        <MDBCardTitle>name</MDBCardTitle>
+                        <MDBCardTitle>{inventory.name}</MDBCardTitle>
                         <MDBCardText>
-                            description.
+                            {inventory.description}
                         </MDBCardText>
                     </MDBCardBody>
                     <MDBListGroup flush>
