@@ -1,12 +1,56 @@
-import React from 'react';
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import React, { useState } from 'react';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Register = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    const [userError, setUserError] = useState('');
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
-    const onSubmit = (data) => console.log(data);
+
+
+    /* ---------------------------------------Registration submit btn-------------------------------------------------- */
+    const onSubmit = async (data) => {
+        const { name, email, password, confirmPassword } = data;
+
+        /*---------------------------------------- Error Validation ---------------------------------------------------*/
+
+        if (!/\S+@\S+\.\S+/.test(email)) {
+            setUserError('Enter a valid email');
+            return;
+        };
+
+
+        if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+            setUserError('Password should contain at least one special character');
+            return;
+        }
+
+        if (password.length < 6) {
+            setUserError('Password should be more than 6 characters')
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            setUserError('You two passwords did not match')
+            return;
+        }
+
+        await createUserWithEmailAndPassword(email, password)
+        setUserError('');
+        navigate('/home')
+        // await updateProfile({ displayName: name });
+    };
     return (
         <div className='container'>
             <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold" style={{ width: "30vw" }}>Registration Form</h2>
@@ -19,8 +63,10 @@ const Register = () => {
                     *Email* is mandatory </span>}
                 <label className='fw-bold text-primary fs-4'>Password</label>
                 <input type="password" {...register("password")} />
+                <label className='fw-bold text-primary fs-4'>Confirm Password</label>
+                <input type="password" {...register("confirmPassword")} />
                 <input type={"submit"} className="btn btn-primary mx-auto py-3" />
-                {/* <p className='text-danger' style={{ color: 'red' }}>{userError || error?.message}</p> */}
+                <p className='text-danger' style={{ color: 'red' }}>{userError || error?.message}</p>
                 <p>Already have an account? <Link to='/login' className='text-primary text-decoration-none' onClick={() => navigate('/login')}>Please Login</Link></p>
                 <SocialLogin></SocialLogin>
             </form>
