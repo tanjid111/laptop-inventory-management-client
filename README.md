@@ -1,7 +1,7 @@
 # Realtor Website
 
 ### Livesite Link: 
-
+https://laptop-inventory-management.firebaseapp.com/
 
 ### Features:
 - This is a single page app made using React and React Router
@@ -23,7 +23,7 @@
 - React axios
 - JWT 
 - Heroku for server hosting
-- 
+
 
 
 # Getting Started with Create React App
