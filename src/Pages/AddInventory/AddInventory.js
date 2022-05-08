@@ -8,7 +8,7 @@ const AddInventory = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data)
-        const url = `http://localhost:5000/laptop`;
+        const url = `https://gentle-shelf-57774.herokuapp.com/laptop`;
         fetch(url, {
             method: 'POST',
             headers: {

@@ -20,7 +20,7 @@ const ManageInventory = () => {
                 {
                     label: 'Yes',
                     onClick: (_id) => {
-                        const url = `http://localhost:5000/laptop/${id}`;
+                        const url = `https://gentle-shelf-57774.herokuapp.com/laptop/${id}`;
                         fetch(url, {
                             method: 'DELETE'
                         })

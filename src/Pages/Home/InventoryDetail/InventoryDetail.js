@@ -19,7 +19,7 @@ const InventoryDetail = () => {
             const newInventory = { ...inventory, quantity: newQuantity, sold: newSold }
 
             setInventory(newInventory);
-            fetch(`http://localhost:5000/laptop/${id}`, {
+            fetch(`https://gentle-shelf-57774.herokuapp.com/laptop/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'
@@ -39,7 +39,7 @@ const InventoryDetail = () => {
         let newQuantity = parseInt(quantity) + parseInt(quantityInput);
         const newInventory = { ...inventory, quantity: newQuantity }
         setInventory(newInventory);
-        fetch(`http://localhost:5000/laptop/${_id}`, {
+        fetch(`https://gentle-shelf-57774.herokuapp.com/laptop/${_id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

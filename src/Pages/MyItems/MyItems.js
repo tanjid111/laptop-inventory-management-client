@@ -16,7 +16,7 @@ const MyItems = () => {
     useEffect(() => {
         const getItem = async () => {
             const email = user.email;
-            const url = `http://localhost:5000/laptop1?email=${email}`;
+            const url = `https://gentle-shelf-57774.herokuapp.com/laptop1?email=${email}`;
             try {
                 const { data } = await axios.get(url, {
                     headers: {
@@ -45,7 +45,7 @@ const MyItems = () => {
                 {
                     label: 'Yes',
                     onClick: (_id) => {
-                        const url = `http://localhost:5000/laptop/${id}`;
+                        const url = `https://gentle-shelf-57774.herokuapp.com/laptop/${id}`;
                         fetch(url, {
                             method: 'DELETE'
                         })
