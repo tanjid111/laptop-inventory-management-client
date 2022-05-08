@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
-import 'mdb-react-ui-kit/dist/css/mdb.min.css'
 import Home from './Pages/Home/Home/Home';
 import InventoryDetail from './Pages/Home/InventoryDetail/InventoryDetail';
 import ManageInventory from './Pages/Home/ManageInventory/ManageInventory';
@@ -12,24 +11,14 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ResetPassword from './Pages/Login/ResetPassword/ResetPassword';
 import AddInventory from './Pages/AddInventory/AddInventory';
-// import { addResponseMessage, Widget } from 'react-chat-widget';
-// import { useEffect } from 'react';
-// import logo from './logo.svg';
-import 'react-chat-widget/lib/styles.css';
+// import 'react-chat-widget/lib/styles.css';
 import { ToastContainer } from 'react-toastify';
 import MyItems from './Pages/MyItems/MyItems';
+import Blogs from './Pages/Home/Blogs/Blogs';
 
 
 function App() {
-  // useEffect(() => {
-  //   addResponseMessage('Welcome to this **awesome** chat!');
-  // }, []);
 
-
-  // const handleNewUserMessage = (newMessage) => {
-  //   console.log(`New message incoming! ${newMessage}`);
-  //   // Now send the message through the backend API
-  // };
   return (
     <div className="d-flex flex-column min-vh-100">
 
@@ -57,6 +46,7 @@ function App() {
             <MyItems></MyItems>
           </RequireAuth>
         }></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/reset' element={<ResetPassword></ResetPassword>}></Route>
@@ -64,13 +54,6 @@ function App() {
       </Routes>
       <Footer></Footer>
       <ToastContainer></ToastContainer>
-      {/* <Widget
-        handleNewUserMessage={handleNewUserMessage}
-        profileAvatar={logo}
-        title="My new awesome title"
-        subtitle="And my cool subtitle"
-
-      /> */}
     </div>
   );
 }

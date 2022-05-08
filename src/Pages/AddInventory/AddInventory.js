@@ -39,9 +39,9 @@ const AddInventory = () => {
                 <label className='fw-bold text-primary fs-4'>Price</label>
                 <input placeholder="Price" className="mb-2" type="number" {...register("price")} />
                 <label className='fw-bold text-primary fs-4'>Quantity</label>
-                <input placeholder="Quantity" className="mb-2" type="number" {...register("quantity", { required: true })} />
+                <input placeholder="Quantity" min={0} className="mb-2" type="number" {...register("quantity", { required: true })} />
                 <label className='fw-bold text-primary fs-4'>Sold</label>
-                <input placeholder="Sold" className="mb-2" type="number" {...register("sold")} />
+                <input placeholder="Sold" min={0} value={0} className="mb-2" type="number" {...register("sold", { required: true })} />
                 <label className='fw-bold text-primary fs-4'>Image Link</label>
                 <input placeholder="Image Link" className="mb-2" {...register("img")} />
                 <label className='fw-bold text-primary fs-4'>Supplier</label>

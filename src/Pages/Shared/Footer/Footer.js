@@ -1,9 +1,6 @@
 import React from 'react';
 import {
     MDBFooter,
-    MDBContainer,
-    MDBCol,
-    MDBRow,
     MDBIcon
 } from 'mdb-react-ui-kit';
 
@@ -15,7 +12,7 @@ export default function App() {
                     <a
                         className='btn btn-primary btn-floating m-1'
                         style={{ backgroundColor: '#3b5998' }}
-                        href='#!'
+                        href='https://www.facebook.com'
                         role='button'
                     >
                         <MDBIcon fab icon='facebook-f' />
@@ -24,24 +21,17 @@ export default function App() {
                     <a
                         className='btn btn-primary btn-floating m-1'
                         style={{ backgroundColor: '#55acee' }}
-                        href='#!'
+                        href='https://www.twitter.com'
                         role='button'
                     >
                         <MDBIcon fab icon='twitter' />
                     </a>
 
-                    <a
-                        className='btn btn-primary btn-floating m-1'
-                        style={{ backgroundColor: '#dd4b39' }}
-                        href='#!'
-                        role='button'
-                    >
-                        <MDBIcon fab icon='google' />
-                    </a>
+
                     <a
                         className='btn btn-primary btn-floating m-1'
                         style={{ backgroundColor: '#ac2bac' }}
-                        href='#!'
+                        href='https://www.instagram.com'
                         role='button'
                     >
                         <MDBIcon fab icon='instagram' />
@@ -50,7 +40,7 @@ export default function App() {
                     <a
                         className='btn btn-primary btn-floating m-1'
                         style={{ backgroundColor: '#0082ca' }}
-                        href='#!'
+                        href='https://www.linkedin.com'
                         role='button'
                     >
                         <MDBIcon fab icon='linkedin-in' />
@@ -59,7 +49,7 @@ export default function App() {
                     <a
                         className='btn btn-primary btn-floating m-1'
                         style={{ backgroundColor: '#333333' }}
-                        href='#!'
+                        href='https://www.github.com'
                         role='button'
                     >
                         <MDBIcon fab icon='github' />

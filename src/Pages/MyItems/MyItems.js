@@ -4,9 +4,9 @@ import axios from 'axios'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { confirmAlert } from 'react-confirm-alert';
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardLink, MDBCardText, MDBCardTitle, MDBListGroup, MDBListGroupItem } from 'mdb-react-ui-kit';
 import { signOut } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 
 const MyItems = () => {
     const [user] = useAuthState(auth)
@@ -67,30 +67,31 @@ const MyItems = () => {
 
     return (
         <div className='container'>
-            <h2>Your Added Items:{inventories.length}</h2>
+            <h2 className='text-center'>Your Added Items:{inventories.length}</h2>
             {
 
                 inventories.map(inventory => <div className='my-5' key={inventory._id}>
-                    <MDBCard className='w-50 mx-auto'>
-                        <MDBCardImage className='w-50 mx-auto' position='top' alt='...' src={inventory.img} />
-                        <MDBCardBody>
-                            <MDBCardTitle className='my-3'>{inventory.name}</MDBCardTitle>
-                            <MDBCardText>
+
+                    <Card className='mx-auto' style={{ width: '18rem' }}>
+                        <Card.Img variant="top" src={inventory.img} />
+                        <Card.Body>
+                            <Card.Title>{inventory.name}</Card.Title>
+                            <Card.Text>
                                 {inventory.description}
-                            </MDBCardText>
-                        </MDBCardBody>
-                        <MDBListGroup flush>
-                            <MDBListGroupItem>Price: ${inventory.price}</MDBListGroupItem>
+                            </Card.Text>
+                        </Card.Body>
+                        <ListGroup className="list-group-flush">
+                            <ListGroupItem>Price: ${inventory.price}</ListGroupItem>
+                            <ListGroupItem>Quantity: {inventory.quantity}</ListGroupItem>
+                            <ListGroupItem>Sold: {inventory.sold}</ListGroupItem>
+                            <ListGroupItem>Supplier: {inventory.supplier}</ListGroupItem>
+                        </ListGroup>
+                        <Card.Body>
+                            <Card.Link onClick={() => { handleDelete(inventory._id) }} className='btn btn-primary' href="#">Delete</Card.Link>
 
-                            <MDBListGroupItem>Quantity: {inventory.quantity}</MDBListGroupItem>
-                            <MDBListGroupItem>Sold: {inventory.sold}</MDBListGroupItem>
+                        </Card.Body>
+                    </Card>
 
-                            <MDBListGroupItem>Supplier: {inventory.supplier}</MDBListGroupItem>
-                        </MDBListGroup>
-                        <MDBCardBody>
-                            <MDBCardLink onClick={() => { handleDelete(inventory._id) }} className='btn btn-primary' href='#'>Delete</MDBCardLink>
-                        </MDBCardBody>
-                    </MDBCard>
 
                 </div>)
             }

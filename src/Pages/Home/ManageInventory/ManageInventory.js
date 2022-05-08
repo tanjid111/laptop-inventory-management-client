@@ -1,9 +1,10 @@
 import React from 'react';
-import { Table } from 'react-bootstrap';
+import { ListGroup, Table } from 'react-bootstrap';
 import { confirmAlert } from 'react-confirm-alert';
 import useInventories from '../../../Hooks/useInventories';
 import 'react-confirm-alert/src/react-confirm-alert.css';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ManageInventory = () => {
     const [inventories, setInventories] = useInventories([]);
@@ -40,9 +41,20 @@ const ManageInventory = () => {
     }
 
     return (
-        <div>
-            <div className='container'>
-                <h1 className='text-center text-primary my-4'>Inventory: {inventories.length}</h1>
+        <div className='container'>
+            <h1 className='text-center text-primary my-4'>Inventory: {inventories.length}</h1>
+            <div className='container d-flex'>
+                <div>
+                    <ListGroup defaultActiveKey="#link1">
+                        <ListGroup.Item className='bg-primary text-white' action as={Link} to="/add">
+                            Add Item
+                        </ListGroup.Item>
+                        <ListGroup.Item className='bg-primary text-white' action as={Link} to="/myItems">
+                            My Item
+                        </ListGroup.Item>
+
+                    </ListGroup>,
+                </div>
                 <Table responsive="xs" striped bordered hover className='w-75 mx-auto'>
                     <thead>
                         <tr>

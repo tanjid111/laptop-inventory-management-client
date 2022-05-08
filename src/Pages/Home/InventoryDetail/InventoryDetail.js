@@ -1,7 +1,7 @@
-import { MDBCard, MDBCardBody, MDBCardImage, MDBCardLink, MDBCardText, MDBCardTitle, MDBListGroup, MDBListGroupItem } from 'mdb-react-ui-kit';
 import React from 'react';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import useInventoryDetail from '../../../Hooks/useInventoryDetail';
 
 const InventoryDetail = () => {
@@ -56,31 +56,30 @@ const InventoryDetail = () => {
 
     return (
         <div className='container'>
-            <h1 className=' my-3 text-center'>InventoryDetail</h1>
+            <h1 className=' my-3 text-center text-primary '>InventoryDetail</h1>
             <div className='d-flex align-items-center justify-content-center'>
-                <MDBCard className='w-50'>
-                    <MDBCardImage position='top' alt='...' src={inventory.img} />
-                    <MDBCardBody>
-                        <MDBCardTitle className='my-3'>{inventory.name}</MDBCardTitle>
-                        <MDBCardText>
-                            {inventory.description}
-                        </MDBCardText>
-                    </MDBCardBody>
-                    <MDBListGroup flush>
-                        <MDBListGroupItem>Price: ${inventory.price}</MDBListGroupItem>
 
-                        <MDBListGroupItem>Quantity: {inventory.quantity}</MDBListGroupItem>
-                        <MDBListGroupItem>Sold: {
-                            quantity > 0 ? inventory.sold : <span className='text-danger'>Sold Out!</span>
-                        }</MDBListGroupItem>
-                        <MDBListGroupItem>Supplier: {inventory.supplier}</MDBListGroupItem>
-                    </MDBListGroup>
-                    <MDBCardBody>
-                        <MDBCardLink onClick={() => removeOne(inventory._id)} className='btn btn-primary' href='#'>Delivered</MDBCardLink>
-                    </MDBCardBody>
-                </MDBCard>
+                <Card className='mx-auto' style={{ width: '40rem' }}>
+                    <Card.Img variant="top" src={inventory.img} />
+                    <Card.Body>
+                        <Card.Title>{inventory.name}</Card.Title>
+                        <Card.Text>
+                            {inventory.description}
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Price: ${inventory.price}</ListGroupItem>
+                        <ListGroupItem>Quantity: {inventory.quantity}</ListGroupItem>
+                        <ListGroupItem>Sold: {inventory.sold}</ListGroupItem>
+                        <ListGroupItem>Supplier: {inventory.supplier}</ListGroupItem>
+                    </ListGroup>
+                    <Card.Body className='text-center mx-auto'>
+                        <Card.Link onClick={() => removeOne(inventory._id)} className='btn btn-primary' href="#">Delivered</Card.Link>
+                    </Card.Body>
+                </Card>
+
             </div>
-            <form className='text-center my-3' onSubmit={handleSubmit(onSubmit)}>
+            <form className='text-center my-3 w-25 mx-auto' onSubmit={handleSubmit(onSubmit)}>
                 <h3 className='my-3'>Restock the Item</h3>
                 <label>Update Quantity</label>
                 <input defaultValue="" {...register("quantityInput")} />
@@ -88,7 +87,7 @@ const InventoryDetail = () => {
                 <br />
                 <input className='btn btn-primary my-2' value="Update" type="submit" />
             </form>
-            <div className='text-center'>
+            <div className='text-center w-25 mx-auto '>
 
                 <button onClick={() => navigate('/manage')} className='btn btn-primary'>Manage All Inventory</button>
 
