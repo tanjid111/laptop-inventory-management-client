@@ -1,8 +1,8 @@
 import React from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Inventory = ({ inventory }) => {
-    const { _id, name, price, description, quantity, img, supplier } = inventory;
+    const { _id, name, price, description, quantity, sold, img, supplier } = inventory;
     const navigate = useNavigate();
     const navigateToInventoryDetail = (id) => {
         navigate(`/inventory/${id}`)
@@ -18,9 +18,10 @@ const Inventory = ({ inventory }) => {
                     <h3 className="card-title">{name}</h3>
                     <h5 className="card-title">${price}</h5>
                     <h5 className="card-title">Quantity Available: {quantity}</h5>
+                    <h5 className="card-title">Sold: {sold}</h5>
                     <h5 className="card-title">Supplier: {supplier}</h5>
                     <p className="card-text">{description.length < 100 ? description : description.slice(0, 200)}
-                        <span style={{ cursor: 'pointer' }} className='read-more text-primary' onClick={() => Navigate(`/realestate/${_id}`)}>
+                        <span style={{ cursor: 'pointer' }} className='read-more text-primary' onClick={() => navigate(`/inventory/${_id}`)}>
                             ...Read More
                         </span></p>
                     <button onClick={() => navigateToInventoryDetail(_id)} className="btn btn-primary mt-auto">Manage</button>

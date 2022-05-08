@@ -12,10 +12,25 @@ import NotFound from './Pages/Shared/NotFound/NotFound';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
 import ResetPassword from './Pages/Login/ResetPassword/ResetPassword';
 import AddInventory from './Pages/AddInventory/AddInventory';
+// import { addResponseMessage, Widget } from 'react-chat-widget';
+// import { useEffect } from 'react';
+// import logo from './logo.svg';
+import 'react-chat-widget/lib/styles.css';
+
 
 function App() {
+  // useEffect(() => {
+  //   addResponseMessage('Welcome to this **awesome** chat!');
+  // }, []);
+
+
+  // const handleNewUserMessage = (newMessage) => {
+  //   console.log(`New message incoming! ${newMessage}`);
+  //   // Now send the message through the backend API
+  // };
   return (
     <div className="d-flex flex-column min-vh-100">
+
       <Header></Header>
       <Routes className='container'>
         <Route path='/' element={<Home></Home>}></Route>
@@ -41,6 +56,13 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      {/* <Widget
+        handleNewUserMessage={handleNewUserMessage}
+        profileAvatar={logo}
+        title="My new awesome title"
+        subtitle="And my cool subtitle"
+
+      /> */}
     </div>
   );
 }

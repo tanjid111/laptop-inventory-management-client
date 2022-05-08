@@ -6,6 +6,7 @@
         "description": "Between processor, memory, storage, and display options, the ThinkPad T14 AMD 14 inch laptop offers nearly unlimited configurations, making it one of the most customizable computers on the market. With long battery life and rapid-charging technology, you can unleash from your desk to confidently go wherever the road or the sky takes you.",
         "img": "https://i.ibb.co/hMJ2vK0/1.webp",
         "quantity": 4,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -15,6 +16,7 @@
         "description": "The ThinkPad P1 Gen 4 performance laptop blends form and function with an elegant carbon-fiber weave and lightweight design, starting at just 1.8kg / 3.99lbs. The stylish exterior conceals impressive performance with the latest 11th Gen Intel® Core™ or Xeon® processors. Plus, choose professional NVIDIA® RTX™ graphics—supporting up to the NVIDIA® RTX™ A5000 backed by ISV certifications or the powerful NVIDIA® GeForce RTX™ 3070 or 3080.",
         "img": "https://i.ibb.co/JnkXjJg/2.webp",
         "quantity": 3,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -24,6 +26,7 @@
         "description": "With the all-new AMD Ryzen™ 5000 H-Series Mobile Processors, you can enjoy the best competitive gaming performance on a thin and light notebook with amazing battery life. Never compromise on your gaming laptop again.Experience ultimate performance with the latest Ampere NVIDIA® GeForce RTX™ 30 Series Laptop GPUs for gamers and creators. Supercharged with Ray Tracing Cores, Tensor Cores, and streaming multiprocessors, our thin and light design delivers the most realistic ray-traced graphics, cutting-edge new features, DLSS 2.0 and the power of AI.",
         "img": "https://i.ibb.co/chLfvFh/3.webp",
         "quantity": 2,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -33,6 +36,7 @@
         "description": "They say life is full of compromises. They say you cant have high performance and long battery life on the same notebook. They say that a high-performance gaming laptop has to be big, bulky, and heavy. Theyre wrong. Now you can enjoy elite gaming performance on a thin and light gaming laptop with amazing battery life, thanks to the new AMD Ryzen™ 5000 H-Series Mobile Processors. Never compromise on your gaming laptop again.",
         "img": "https://i.ibb.co/mFbQPKb/4.webp",
         "quantity": 5,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -42,6 +46,7 @@
         "description": "Take a revolutionary leap into real-world hybrid performance with Intel® Evo, now powered by up to a 12th Gen Intel® Core™ i7 processor, which distributes processing power to where you need it most. From streaming to browsing to photo and video editing and more—experience the performance boost, you need for your most significant breakthroughs.",
         "img": "https://i.ibb.co/5j63RKd/5.webp",
         "quantity": 6,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -51,6 +56,7 @@
         "description": "This sleek 2 in 1 laptop offers a contemporary style. Crafted from sandblasted and anodized metal, the Yoga 7is subtly rounded edges are designed to feel comfortable in your hands. A 360-degree hinge offers stability as you transition from tablet to laptop mode and back.",
         "img": "https://i.ibb.co/JkKgtTw/6.webp",
         "quantity": 8,
+        "sold": 0,
         "supplier": "Lenovo"
     },
     {
@@ -60,6 +66,7 @@
         "description": "The incredibly compact, thin and light ZenBook 14 features AMD Ryzen™ 9 5900HX processor for powerful all-round performance, and includes HDMI, USB-C® and USB Type-A ports, a microSD card reader, and a combo audio jack for unrivaled versatility. With its beautifully crafted classic design and travel-friendly features, ZenBook 14 will make your on-the-go lifestyle more effortless than ever.",
         "img": "https://i.ibb.co/42zZBMD/7.png",
         "quantity": 4,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -69,6 +76,7 @@
         "description": "A CNC-milled window at the rear of the chassis allows a look straight into the mainboard of the machine, and also gives the components beneath more freedom and height than traditional designs. This bold break provides gorgeous RGB accent lighting, while also allowing chip components to be placed on both sides of the mainboard due to the larger volume of space available. Larger than normal components paired with the dual sided motherboard allow for much more performance than standard 13” machines.",
         "img": "https://i.ibb.co/1vJ4HqF/8.png",
         "quantity": 2,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -78,6 +86,7 @@
         "description": "The ROG Zephyrus G14 makes powerful, ultraportable Windows 10 Pro gaming accessible to everyone. Featuring up to an 8-core AMD Ryzen™ 9 5900HS CPU and GeForce RTX™ 3060 GPU, this slim and stylish powerhouse rips through the most demanding apps and games. Two gorgeous display options—high-res, high-refresh 120Hz QHD or ultra-fluid 144Hz Full HD—keep you immersed with lifelike, Pantone® validated colors. Quad speakers pump out lush Dolby Atmos audio, while exclusive Two-Way AI Noise Cancelation makes voice chat crystal clear. Live life at Zephyrus speed with the ultimate blend of power and portability.",
         "img": "https://i.ibb.co/8PSmbcf/9.png",
         "quantity": 5,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -87,6 +96,7 @@
         "description": "ZenBook Pro Duo 15 OLED lets you get things done in style: calmly, efficiently, and with zero fuss. Its your powerful and elegant next-level companion for on-the-go productivity and creativity, featuring an amazing 4K OLED HDR touchscreen. It also includes the tilting ASUS ScreenPad™ Plus secondary 4K display that offers effortless ergonomics and seamless workflows. Powered by up to an Intel® Core™ i9 eight-core processor and NVIDIA® GeForce RTX™ 3080 GPU, ZenBook Pro Duo 15 OLED brings you all the benefits of tomorrows technology, today.",
         "img": "https://i.ibb.co/7rb2nF1/10.png",
         "quantity": 5,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -96,6 +106,7 @@
         "description": "Turn your creative vision into reality with the ProArt Studiobook Pro 16 OLED studio laptop: it pushes every boundary to give you the effortless creative experience youve always wanted, but never thought possible. With a certified colour-accurate 16-inch 4K OLED HDR 16:10 display, up to a breathtakingly powerful Intel® Xeon® processor, pro-grade NVIDIA RTX™ A5000 graphics, huge amounts of memory, advanced ultrafast storage, superb I/O connectivity, and ultra-precise fingertip control over your creative apps with the groundbreaking new ASUS Dial, ProArt Studiobook Pro 16 OLED is simply the best creator laptop weve ever made.",
         "img": "https://i.ibb.co/dpdVG3P/11.png",
         "quantity": 3,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -105,6 +116,7 @@
         "description": "Take charge of the business world with ASUS ExpertBook B9. Its sleek, precision-crafted and minimalist chassis pushes the limits of lightness for ultimate portability, while giving it a toughness that has no equal. Its built for serious travel with an amazing all-day battery life, and is engineered with many cutting-edge technologies to improve your on-the-go work efficiency. These include a next-gen Intel® processor, AI noise cancellation, dual-SSD RAID support, ASUS NumberPad 2.0 and built-in proximity sensor. Enterprise-grade security ensures your confidential data is kept safe, making it easy to see why ExpertBook B9 is the benchmark for business laptops. Extremely portable, powerful and tough, its your ideal partner in the corporate world.",
         "img": "https://i.ibb.co/5YsYS10/12.png",
         "quantity": 9,
+        "sold": 0,
         "supplier": "Asus"
     },
     {
@@ -114,6 +126,7 @@
         "description": "Our most powerful 13-inch XPS laptop is up to twice as powerful as before* in the same size. It features 12th Gen Intel® Core™ processors and the latest battery technology, providing long battery life in a lightweight design—all for a stunning combination of speed, performance and premium mobility. Plus, dual fans are now larger, providing up to 55% more airflow* and in turn, enabling a more powerful system in the same size without increasing noise or temperature. ",
         "img": "https://i.ibb.co/gTRX0h4/13.png",
         "quantity": 6,
+        "sold": 0,
         "supplier": "Dell"
     },
     {
@@ -123,6 +136,7 @@
         "description": "The XPS 15 is the perfect balance of size and performance to fuel even more intensive creative projects. Create more of what you love with a PC powered by 12th Gen Intel® Core™ processors. Edit videos and export them faster. Use AI to help you design and broadcast at higher quality with AI effects. From ray tracing to AI-powered video editing, optional NVIDIA® GeForce RTX™ 3050 Ti GPUs deliver the performance to boost workflows and accelerate your creative genius.",
         "img": "https://i.ibb.co/ZdW6w1R/14.png",
         "quantity": 3,
+        "sold": 0,
         "supplier": "Dell"
     },
     {
@@ -132,6 +146,7 @@
         "description": "Only available on the Dark Green model with a 4K UHD+ OLED display, the below premium features take your front-of-screen experience to a new level. Enjoy the rich detail of each pixel with 4K Ultra HD+ (3840 x 2400) resolution. Experience saturated color with a 1,000,000:1 contrast ratio while a 100% DCI-P3 color gamut makes images feel true-to-life.",
         "img": "https://i.ibb.co/Yp2VVPX/15.png",
         "quantity": 9,
+        "sold": 0,
         "supplier": "Dell"
     },
     {
@@ -141,6 +156,7 @@
         "description": "Experience a more responsive yet quieter performance, featuring the latest AMD processors with PCIe SSD options. Benefit from roomy keycaps and a spacious touchpad that makes it easier to navigate your content. ComfortView software, which is a TUV Rheinland certified* solution, reduces harmful blue light emissions to keep your eyes comfortable over extended viewing times.",
         "img": "https://i.ibb.co/cJRLcHn/16.png",
         "quantity": 6,
+        "sold": 0,
         "supplier": "Dell"
     },
     {
@@ -150,6 +166,7 @@
         "description": "Still first in fast: The Alienware m15 R6 is our latest 15” M-Series gaming laptop to carry a 360Hz* optional display. The impressively fast refresh rate ensures seamless gameplay and incredible visual performance. Crystal-clear action: Whether you're gaming at your leisure or in the thick of battle, never miss any critical details thanks to smoother gameplay. Thanks to our deliberate engineering decisions, the latest m15 is incredibly fast starting from 165Hz. But we didn't stop there. The latest m15 R6 offers smoother gameplay during high-speed action thanks to NVIDIA® G-SYNC® technology that synchronizes your displays refresh rate with the performance your graphics card is capable of—available only on the optional 360Hz FHD (1920 x 1080) resolution and 240Hz QHD (2560 x 1440) resolution display.",
         "img": "https://i.ibb.co/bd4wKvb/17.png",
         "quantity": 3,
+        "sold": 0,
         "supplier": "Dell"
     },
     {
@@ -159,6 +176,7 @@
         "description": "Guaranteed power: Experience powerful performance whether youre gaming or streaming thanks to AMD Ryzen™ 5000 H-Series Mobile Processors. Keep cool: Our thermal systems utilize copper piping to dissipate heat as its pulled through the top of the keyboard and bottom of the system via four large exhaust vents.",
         "img": "https://i.ibb.co/KNBDnb4/18.png",
         "quantity": 5,
+        "sold": 0,
         "supplier": "Dell"
     }
 ]

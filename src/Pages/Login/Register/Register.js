@@ -60,6 +60,10 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password)
         setUserError('');
+
+        if (user) {
+            navigate('/home')
+        }
         navigate('/home')
         await updateProfile({ displayName: name });
 

@@ -6,8 +6,10 @@ import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ResetPassword = () => {
+    const navigate = useNavigate();
     const [
         userError,
         setUserError
@@ -22,6 +24,7 @@ const ResetPassword = () => {
     if (sending) {
         return <Loading></Loading>
     }
+
 
     const onSubmit = async (data) => {
 
@@ -52,12 +55,12 @@ const ResetPassword = () => {
             <h2 className="text-center bg-primary mx-auto py-5 text-light fw-bold" style={{ width: "30vw" }}>Reset Form</h2>
             <form className="App" onSubmit={handleSubmit(onSubmit)}>
                 <label className='fw-bold text-primary fs-4'>Email</label>
-                <input type="email" {...register("email", { required: false })} />
+                <input placeholder='Email' type="email" {...register("email", { required: false })} />
                 {errors.email && <span style={{ color: "red" }}>
                     *Email* is mandatory </span>}
                 <input type={"submit"} className="btn btn-primary mx-auto py-3" />
                 <p className='text-danger' style={{ color: 'red' }}> {resetError?.message || userError}</p>
-
+                <Link to='/login' className='text-primary text-decoration-none' onClick={() => navigate('/login')}>Back to Login</Link>
             </form>
             <ToastContainer />
         </div>

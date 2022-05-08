@@ -1,9 +1,6 @@
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import React, { useRef, useState } from 'react';
-import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -56,7 +53,7 @@ const Login = () => {
                 {/* <p>Forget Password? <button className='btn btn-link text-primary text-decoration-none' onClick={resetPassword}>Reset Password</button> </p> */}
                 <SocialLogin></SocialLogin>
             </form>
-            <ToastContainer />
+
         </div>
     );
 };

@@ -2,10 +2,15 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 import { confirmAlert } from 'react-confirm-alert';
 import useInventories from '../../../Hooks/useInventories';
-import 'react-confirm-alert/src/react-confirm-alert.css'; // Import css
+import 'react-confirm-alert/src/react-confirm-alert.css';
+import { useNavigate } from 'react-router-dom';
 
 const ManageInventory = () => {
     const [inventories, setInventories] = useInventories([]);
+    const navigate = useNavigate();
+    const navigateToInventoryDetail = (id) => {
+        navigate(`/inventory/${id}`)
+    }
     const handleDelete = id => {
         confirmAlert({
             title: 'Confirm to submit',
@@ -38,15 +43,16 @@ const ManageInventory = () => {
         <div>
             <div className='container'>
                 <h1 className='text-center text-primary my-4'>Inventory: {inventories.length}</h1>
-                <Table striped bordered hover className='w-75 mx-auto'>
+                <Table responsive="xs" striped bordered hover className='w-75 mx-auto'>
                     <thead>
                         <tr>
-                            <th>#</th>
+
                             <th>Image</th>
                             <th>Name</th>
                             <th>Supplier</th>
                             <th>Price</th>
                             <th>Quantity</th>
+                            <th>Sold</th>
                             <th></th>
                         </tr>
                     </thead>
@@ -54,13 +60,14 @@ const ManageInventory = () => {
 
                         {
                             inventories.map(inventory => <tr key={inventory._id}>
-                                {/* <td>{inventory._id}</td> */}
                                 <td><img style={{ width: "80px" }} src={inventory.img} alt="" /></td>
                                 <td>{inventory.name}</td>
                                 <td>{inventory.supplier}</td>
                                 <td>${inventory.price}</td>
                                 <td>{inventory.quantity}</td>
-                                <td><button onClick={() => { handleDelete(inventory._id) }} type="button" className="btn btn-primary">Delete</button></td>
+                                <td>{inventory.sold}</td>
+                                <td className='d-flex'><button onClick={() => navigateToInventoryDetail(inventory._id)} type="button" className="btn btn-primary mx-2">Update</button>
+                                    <button onClick={() => { handleDelete(inventory._id) }} type="button" className="btn btn-danger">Delete</button></td>
                             </tr>)}
 
 
