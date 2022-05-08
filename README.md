@@ -1,4 +1,4 @@
-# Realtor Website
+# Laptop Inventory Website
 
 ### Livesite Link: 
 https://laptop-inventory-management.firebaseapp.com/

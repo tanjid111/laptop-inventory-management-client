@@ -55,7 +55,8 @@ const ManageInventory = () => {
 
                     </ListGroup>,
                 </div>
-                <Table responsive="xs" striped bordered hover className='w-75 mx-auto'>
+
+                <Table style={{ overflow: "scroll" }} responsive="lg" striped bordered hover className='w-75 mx-auto container'>
                     <thead>
                         <tr>
 
