@@ -16,6 +16,8 @@ import AddInventory from './Pages/AddInventory/AddInventory';
 // import { useEffect } from 'react';
 // import logo from './logo.svg';
 import 'react-chat-widget/lib/styles.css';
+import { ToastContainer } from 'react-toastify';
+import MyItems from './Pages/MyItems/MyItems';
 
 
 function App() {
@@ -50,12 +52,18 @@ function App() {
             <ManageInventory></ManageInventory>
           </RequireAuth>
         }></Route>
+        <Route path='/myItems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/reset' element={<ResetPassword></ResetPassword>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
       {/* <Widget
         handleNewUserMessage={handleNewUserMessage}
         profileAvatar={logo}

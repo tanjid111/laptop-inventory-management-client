@@ -26,6 +26,10 @@ const InventoryDetail = () => {
                 },
                 body: JSON.stringify(newInventory)
             })
+                .then(res => res.json())
+                .then(result => {
+                    console.log(result);
+                })
         }
     }
 
@@ -42,6 +46,10 @@ const InventoryDetail = () => {
             },
             body: JSON.stringify(newInventory)
         })
+            .then(res => res.json())
+            .then(result => {
+                console.log(result);
+            })
 
     };
 
