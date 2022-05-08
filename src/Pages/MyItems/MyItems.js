@@ -5,26 +5,37 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { confirmAlert } from 'react-confirm-alert';
 import { MDBCard, MDBCardBody, MDBCardImage, MDBCardLink, MDBCardText, MDBCardTitle, MDBListGroup, MDBListGroupItem } from 'mdb-react-ui-kit';
+import { signOut } from 'firebase/auth';
+import { useNavigate } from 'react-router-dom';
 
 const MyItems = () => {
     const [user] = useAuthState(auth)
     const [inventories, setInventories] = useInventories();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const getItem = async () => {
             const email = user.email;
             const url = `http://localhost:5000/laptop1?email=${email}`;
-            const { data } = await axios.get(url)
-            setInventories(data);
+            try {
+                const { data } = await axios.get(url, {
+                    headers: {
+                        authorization: `Bearer ${localStorage.getItem('accessToken')}`
+                    }
+                })
+                setInventories(data);
+            }
+            catch (error) {
+                console.log(error.message);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/login');
+                }
+            }
         }
-        getItem()
-    })
+        getItem();
+    });
 
-    // useEffect(() => {
-    //     fetch(`http://localhost:5000/laptop1?email=${user.email}`)
-    //         .then(res => res.json())
-    //         .then(data => setInventories(data))
-    // })
 
     const handleDelete = id => {
         confirmAlert({

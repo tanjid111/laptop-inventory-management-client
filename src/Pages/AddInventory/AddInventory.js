@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
@@ -27,9 +26,6 @@ const AddInventory = () => {
         reset();
 
     };
-
-
-
 
     return (
         <div className="w-50 mx-auto">

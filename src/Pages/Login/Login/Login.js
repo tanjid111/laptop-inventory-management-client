@@ -5,6 +5,7 @@ import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 import './Login.css';
+import useToken from '../../../Hooks/useToken';
 
 const Login = () => {
     const [
@@ -20,10 +21,10 @@ const Login = () => {
     const location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
-
-    const onSubmit = (data) => {
+    const [token] = useToken(user);
+    const onSubmit = async data => {
         const { email, password } = data;
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password);
 
     };
 
@@ -31,7 +32,7 @@ const Login = () => {
         return <Loading></Loading>
     }
 
-    if (user) {
+    if (token) {
         navigate(from, { replace: true });
     }
 
